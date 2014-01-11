@@ -25,16 +25,21 @@ public class Cell extends JButton{
 		else{
 			live();
 		}
-		setBackground(color);
 	}
 	
 	public void live(){
 		isAlive = true;
 		color = aliveColor;
+		setBackground(color);
 	}
 	
 	public void kill(){
 		isAlive = false;
 		color = deadColor;
+		setBackground(color);
+	}
+	
+	public boolean isAlive(){
+		return isAlive;
 	}
 }
